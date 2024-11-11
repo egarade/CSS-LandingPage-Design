@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="/landpage.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 </head>
 <body>
         <div class="container">
@@ -294,7 +296,7 @@
             </div>
           </section>
         </div>
-        <section class="Testimonials">
+        <!-- <section class="Testimonials">
           <h3 style="font-size: 30px;">Testimonials</h3>
           <div>
           <p>
@@ -310,14 +312,51 @@
           <p><b>June cha</b></p>
           <p>Sofware Engineer</p>
          </div>
-        </section>
+        </section> -->
+        <h3 class="testimonial-title" style="font-size: 30px;">Testimonials</h3>
+        <div id="testimonial-container">
+          <div id="testimonial">
+              <img id="testimonial-photo" src="" alt="Testimonial Photo">
+              <div id="testimonial-text">
+                  <h3 id="testimonial-name"></h3>
+                  <p id="testimonial-position"></p>
+                  <p id="testimonial-quote"></p>
+              </div>
+          </div>
+          <div id="navigation">
+              <button id="prev-btn">Previous</button>
+              <button id="next-btn">Next</button>
+          </div>
+      </div>
+
         <!--   Footer     -->
         <section class="Footer">
+
+          <form id="contactForm">
+            
+            <div>
+              <h2>Contact Us</h2>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <div class="error-message" id="name-error">This field is required.</div>
+            </div>
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <div class="error-message" id="email-error">This field is required.</div>
+            </div>
+            <div>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <div class="error-message" id="message-error">This field is required.</div>
+            </div>
+            <button class="submit" type="submit">Submit</button>
+        </form>
           
-          <form>
+          <!-- <form>
             <h1>Contact us</h1>
             <div>
-              <label for="name">Name</label><br />
+              <label for="name" required>Name</label><br />
               <input
                 type="text"
                 name="name"
@@ -346,14 +385,15 @@
             <div class="button">
               <button class="wb-btn" type="submit">Submit</button>
             </div>
-          </form>
+          </form> -->
           <br />
          <div class="Copyright">
-          &copy; 2024 Your Competitive Programming Platform. All rights reserved.
+          <P>&copy; <span id="copyright-year"></span> Your Competitive Programming Platform. All rights reserved.</P>
          </div>
         </section>
        </div>
       </body>
     </html>
+    <script src="landpage.js"></script>
 </body>
 </html>
